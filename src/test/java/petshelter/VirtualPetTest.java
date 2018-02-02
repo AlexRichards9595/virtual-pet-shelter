@@ -36,4 +36,21 @@ public class VirtualPetTest {
 		
 		assertEquals(10, check);
 	}
+	@Test
+	public void shouldReturnBoredomAsTen() {
+		VirtualPet underTest = new VirtualPet("Steve",0,0,10);
+		int check = underTest.getBoredom();
+		
+		assertEquals(10, check);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
+
