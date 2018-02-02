@@ -43,6 +43,12 @@ public class VirtualPetShelterTest {
 		assertEquals(20, check);
 	}
 	
+	//TODO adopt a pet
+	//TODO feed all pets
+	//TODO water all pets
+	//TODO play with a specific pet
+	//TODO tick for all pets
+	
 	
 	
 	

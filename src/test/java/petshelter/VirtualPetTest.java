@@ -10,7 +10,13 @@ import org.junit.Test;
 
 public class VirtualPetTest {
 	@Test
-	public void shouldInstantiateAnAccountObjectWithATypeAndBalance() {
+	public void shouldInstantiateAPetWithNameAndDescription() {
+		VirtualPet underTest = new VirtualPet ("","");
+		
+		assertNotNull(underTest);
+	}
+	@Test
+	public void shouldInstantiateAPetWithNameDescriptionAndVitals() {
 		VirtualPet underTest = new VirtualPet("","",0,0,0);
 
 		assertNotNull(underTest);
@@ -48,7 +54,7 @@ public class VirtualPetTest {
 		VirtualPet underTest = new VirtualPet("Steve","Description",0,0,10);
 		String check = underTest.getDescription();
 		
-		assertEquals(10, check);
+		assertEquals("Description", check);
 	}
 	
 	@Test 
@@ -85,7 +91,8 @@ public class VirtualPetTest {
 	}
 	
 	
-	
+	//TODO include a constructor that takes a name and description (user input)
+	//TODO includ a constructor that adds default vitals to name and description
 	
 	
 	

@@ -16,6 +16,11 @@ public class VirtualPet {
 		this.description= description;
 	}
 
+	public VirtualPet(String name, String description) {
+		this.name = name;
+		this.description = description;
+	}
+
 	public String getName() {
 		return name;
 	}
