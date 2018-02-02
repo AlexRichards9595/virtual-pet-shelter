@@ -36,6 +36,10 @@ public class VirtualPet {
 		boredom += 5;
 		
 	}
+
+	public void feed() {
+		hunger -= 5;
+	}
 	
 
 }

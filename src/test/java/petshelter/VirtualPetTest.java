@@ -51,7 +51,14 @@ public class VirtualPetTest {
 		
 		assertEquals(12, check);
 	}
-	
+	@Test
+	public void ShouldSubtractFromHunger() {
+		VirtualPet underTest = new VirtualPet("Steve",10,10,10);
+		underTest.feed();
+		int check = underTest.getHunger();
+		
+		assertEquals(5, check);
+	}
 	
 	
 	
