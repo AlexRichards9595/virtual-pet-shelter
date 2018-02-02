@@ -29,6 +29,13 @@ public class VirtualPet {
 	public int getBoredom() {
 		return boredom;
 	}
+
+	public void tick() {
+		hunger += 2;
+		thirst += 2;
+		boredom += 5;
+		
+	}
 	
 
 }

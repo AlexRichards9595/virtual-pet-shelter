@@ -43,6 +43,14 @@ public class VirtualPetTest {
 		
 		assertEquals(10, check);
 	}
+	@Test 
+	public void TickShouldAddToAllVitalsTestingHunger() {
+		VirtualPet underTest = new VirtualPet("Steve",10,10,10);
+		underTest.tick();
+		int check = underTest.getHunger();
+		
+		assertEquals(12, check);
+	}
 	
 	
 	
