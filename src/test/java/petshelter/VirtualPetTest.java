@@ -29,4 +29,11 @@ public class VirtualPetTest {
 		
 		assertEquals(10, check);
 	}
+	@Test
+	public void shouldReturnSleepAsTen() {
+		VirtualPet underTest = new VirtualPet("Steve",0,10,0);
+		int check = underTest.getThirst();
+		
+		assertEquals(10, check);
+	}
 }
