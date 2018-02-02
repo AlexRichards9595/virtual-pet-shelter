@@ -56,6 +56,15 @@ public class VirtualPetShelter {
 			waterPet(virtualPet.getName());
 		}
 	}
+	public void tickPet(String name) {
+		VirtualPet virtualPet = pets.get(name);
+		virtualPet.tick();
+	}
+	public void tickAllPets() {
+		for (VirtualPet virtualPet: pets()) {
+			tickPet(virtualPet.getName());
+		}
+	}
 
 	
 	

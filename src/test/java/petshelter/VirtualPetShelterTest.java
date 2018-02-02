@@ -78,8 +78,27 @@ public class VirtualPetShelterTest {
 			assertEquals(15, check);
 		}
 	}
+	@Test
+	public void shouldTickAPet () {
+		underTest.addPet(new VirtualPet("Steve", "Description"));
+		underTest.tickPet("Steve");
+		int check = underTest.getPetHunger("Steve");
+		assertEquals(22, check);
+	}
+	@Test
+	public void shouldTickAllPets() {
+		underTest.addPet(new VirtualPet("Steve", "Description"));
+		underTest.addPet(new VirtualPet("Bob", "Description"));
+		underTest.tickAllPets();
+		
+		for(VirtualPet virtualPet: underTest.pets()) {
+			int check = underTest.getPetHunger(virtualPet.getName());
+			assertEquals(22, check);
+		}
+	}
+	
+	
 	//TODO adopt a pet
-	//TODO water all pets
 	//TODO play with a specific pet
 	//TODO tick for all pets
 	
