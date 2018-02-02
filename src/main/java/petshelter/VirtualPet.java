@@ -8,6 +8,10 @@ public class VirtualPet {
 	private int boredom;
 	private String description;
 
+	public VirtualPet(String name, String description) {
+		this(name,description,20,20,20);
+	}
+	
 	public VirtualPet(String name, String description, int hunger, int thirst, int boredom) {
 		this.name = name; 
 		this.hunger = hunger;
@@ -16,10 +20,6 @@ public class VirtualPet {
 		this.description= description;
 	}
 
-	public VirtualPet(String name, String description) {
-		this.name = name;
-		this.description = description;
-	}
 
 	public String getName() {
 		return name;

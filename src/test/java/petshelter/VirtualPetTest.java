@@ -1,9 +1,12 @@
 package petshelter;
 
+import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertThat;
 
 import org.junit.Test;
+import org.mockito.Matchers;
 
 
 
@@ -16,10 +19,13 @@ public class VirtualPetTest {
 		assertNotNull(underTest);
 	}
 	@Test
-	public void shouldInstantiateAPetWithNameDescriptionAndVitals() {
-		VirtualPet underTest = new VirtualPet("","",0,0,0);
+	public void shouldInstantiateAPetWithNameDescriptionAndDefaultVitals() {
+		VirtualPet underTest = new VirtualPet("","");
+		VirtualPet expected = new VirtualPet("","",20,20,20);
+		
 
-		assertNotNull(underTest);
+//		assertEquals(expected, underTest);
+		assertThat(underTest.getHunger(), is(expected.getHunger()));
 	}
 	@Test
 	public void shouldReturnANameAsSteve() {
