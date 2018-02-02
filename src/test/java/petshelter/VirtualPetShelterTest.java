@@ -103,10 +103,15 @@ public class VirtualPetShelterTest {
 		int check = underTest.getPetBoredom("Steve");
 		assertEquals(10, check);
 	}
+	@Test
+	public void shouldRemoveAPetBecauseItWasAdopted() {
+		underTest.addPet(new VirtualPet("Steve", "Description"));
+		underTest.removePet("Steve");
+		assertEquals(null, underTest.getPet("Steve"));
+	}
 	
 	
 	//TODO adopt a pet
-	//TODO play with a specific pet
 	
 	
 	

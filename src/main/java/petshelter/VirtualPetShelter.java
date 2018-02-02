@@ -71,6 +71,10 @@ public class VirtualPetShelter {
 		virtualPet.play();		
 	}
 
+	public void removePet(String name) {
+		pets.remove(name);
+	}
+
 	
 	
 
