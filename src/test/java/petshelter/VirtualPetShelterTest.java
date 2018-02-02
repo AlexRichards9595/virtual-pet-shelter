@@ -35,5 +35,18 @@ public class VirtualPetShelterTest {
 		VirtualPet check = underTest.getPet("Steve");
 		assertEquals(expected,check);
 	}
+	@Test
+	public void assertThatNamePullsHungerFromCorrectAnimal() {
+		underTest.addPet(new VirtualPet("Steve",10,10,10));
+		underTest.addPet(new VirtualPet("Bob",20,20,20));
+		int check = underTest.getPetHunger("Bob");
+		assertEquals(20, check);
+	}
+	
+	
+	
+	
+	
+	
 	
 }

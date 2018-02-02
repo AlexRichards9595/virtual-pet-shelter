@@ -19,4 +19,14 @@ public class VirtualPetShelter {
 		return pets.get(name);
 	}
 
+	public int getPetHunger(String name) {
+		return pets.get(name).getHunger();
+	}
+	public int getPetThirst(String name) {
+		return pets.get(name).getThirst();
+	}
+	public int getPetBoredom(String name) {
+		return pets.get(name).getBoredom();
+	}
+
 }
