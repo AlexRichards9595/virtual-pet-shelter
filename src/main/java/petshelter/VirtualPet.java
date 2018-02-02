@@ -49,5 +49,10 @@ public class VirtualPet {
 		boredom -= 10;
 	}
 	
+	@Override
+	public String toString() {
+		return (name + hunger + thirst + boredom);
+	}
+	
 
 }
