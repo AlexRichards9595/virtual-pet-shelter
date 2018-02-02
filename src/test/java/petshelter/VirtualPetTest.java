@@ -22,5 +22,11 @@ public class VirtualPetTest {
 		
 		assertEquals("Steve", check);
 	}
-	
+	@Test
+	public void shouldReturnHungerAsTen() {
+		VirtualPet underTest = new VirtualPet("Steve",10,0,0);
+		int check = underTest.getHunger();
+		
+		assertEquals(10, check);
+	}
 }
