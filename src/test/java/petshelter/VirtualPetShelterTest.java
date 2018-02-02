@@ -96,11 +96,18 @@ public class VirtualPetShelterTest {
 			assertEquals(22, check);
 		}
 	}
+	@Test
+	public void shouldPlayWithAPet() {
+		underTest.addPet(new VirtualPet("Steve", "Description"));
+		underTest.playWithPet("Steve");
+		int check = underTest.getPetBoredom("Steve");
+		assertEquals(10, check);
+	}
 	
 	
 	//TODO adopt a pet
 	//TODO play with a specific pet
-	//TODO tick for all pets
+	
 	
 	
 	

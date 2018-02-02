@@ -66,6 +66,11 @@ public class VirtualPetShelter {
 		}
 	}
 
+	public void playWithPet(String name) {
+		VirtualPet virtualPet = pets.get(name);
+		virtualPet.play();		
+	}
+
 	
 	
 
