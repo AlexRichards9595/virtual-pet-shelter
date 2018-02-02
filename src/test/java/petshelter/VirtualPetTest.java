@@ -59,6 +59,22 @@ public class VirtualPetTest {
 		
 		assertEquals(5, check);
 	}
+	@Test
+	public void ShouldSubtractFromThirst() {
+		VirtualPet underTest = new VirtualPet("Steve",10,10,10);
+		underTest.water();
+		int check = underTest.getThirst();
+		
+		assertEquals(5, check);
+	}
+	@Test
+	public void ShouldSubtractFromBoredom() {
+		VirtualPet underTest = new VirtualPet("Steve",10,10,10);
+		underTest.play();
+		int check = underTest.getBoredom();
+		
+		assertEquals(0, check);
+	}
 	
 	
 	
