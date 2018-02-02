@@ -47,6 +47,17 @@ public class VirtualPetShelter {
 			feedPet(virtualPet.getName());
 		}
 	}
+	public void waterPet(String name) {
+		VirtualPet virtualPet = pets.get(name);
+		virtualPet.water();
+	}
+	public void waterAllPets() {
+		for (VirtualPet virtualPet: pets()) {
+			waterPet(virtualPet.getName());
+		}
+	}
+
+	
 	
 
 	
