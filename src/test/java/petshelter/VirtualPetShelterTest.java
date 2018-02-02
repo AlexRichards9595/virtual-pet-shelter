@@ -17,28 +17,28 @@ public class VirtualPetShelterTest {
 
 	@Test
 	public void assertThatAPetHasBeenAdded() {
-		underTest.addPet(new VirtualPet("Steve",10,10,10));
+		underTest.addPet(new VirtualPet("Steve","Description",10,10,10));
 		int check = underTest.listSize();
 		assertEquals (1, check);
 	}
 	@Test
 	public void assertThatTwoPetsHaveBeenAdded() {
-		underTest.addPet(new VirtualPet("Steve",10,10,10));
-		underTest.addPet(new VirtualPet("Bob",10,10,10));
+		underTest.addPet(new VirtualPet("Steve","Description",10,10,10));
+		underTest.addPet(new VirtualPet("Bob","Description",10,10,10));
 		int check = underTest.listSize();
 		assertEquals (2, check);
 	}
 	@Test
 	public void assertThatNamePullsAnimalInfo() {
-		VirtualPet expected = new VirtualPet("Steve", 10,10,10);
+		VirtualPet expected = new VirtualPet("Steve","Description", 10,10,10);
 		underTest.addPet(expected);
 		VirtualPet check = underTest.getPet("Steve");
 		assertEquals(expected,check);
 	}
 	@Test
 	public void assertThatNamePullsHungerFromCorrectAnimal() {
-		underTest.addPet(new VirtualPet("Steve",10,10,10));
-		underTest.addPet(new VirtualPet("Bob",20,20,20));
+		underTest.addPet(new VirtualPet("Steve","Description",10,10,10));
+		underTest.addPet(new VirtualPet("Bob","Description",20,20,20));
 		int check = underTest.getPetHunger("Bob");
 		assertEquals(20, check);
 	}

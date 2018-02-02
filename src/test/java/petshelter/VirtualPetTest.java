@@ -11,41 +11,49 @@ import org.junit.Test;
 public class VirtualPetTest {
 	@Test
 	public void shouldInstantiateAnAccountObjectWithATypeAndBalance() {
-		VirtualPet underTest = new VirtualPet("",0,0,0);
+		VirtualPet underTest = new VirtualPet("","",0,0,0);
 
 		assertNotNull(underTest);
 	}
 	@Test
 	public void shouldReturnANameAsSteve() {
-		VirtualPet underTest = new VirtualPet("Steve",0,0,0);
+		VirtualPet underTest = new VirtualPet("Steve","Description",0,0,0);
 		String check = underTest.getName();
 		
 		assertEquals("Steve", check);
 	}
 	@Test
 	public void shouldReturnHungerAsTen() {
-		VirtualPet underTest = new VirtualPet("Steve",10,0,0);
+		VirtualPet underTest = new VirtualPet("Steve","Description",10,0,0);
 		int check = underTest.getHunger();
 		
 		assertEquals(10, check);
 	}
 	@Test
 	public void shouldReturnSleepAsTen() {
-		VirtualPet underTest = new VirtualPet("Steve",0,10,0);
+		VirtualPet underTest = new VirtualPet("Steve","Description",0,10,0);
 		int check = underTest.getThirst();
 		
 		assertEquals(10, check);
 	}
 	@Test
 	public void shouldReturnBoredomAsTen() {
-		VirtualPet underTest = new VirtualPet("Steve",0,0,10);
+		VirtualPet underTest = new VirtualPet("Steve","Description",0,0,10);
 		int check = underTest.getBoredom();
 		
 		assertEquals(10, check);
 	}
+	@Test
+	public void shouldReturnDescriptionAsDescription() {
+		VirtualPet underTest = new VirtualPet("Steve","Description",0,0,10);
+		String check = underTest.getDescription();
+		
+		assertEquals(10, check);
+	}
+	
 	@Test 
 	public void TickShouldAddToAllVitalsTestingHunger() {
-		VirtualPet underTest = new VirtualPet("Steve",10,10,10);
+		VirtualPet underTest = new VirtualPet("Steve","Description",10,10,10);
 		underTest.tick();
 		int check = underTest.getHunger();
 		
@@ -53,7 +61,7 @@ public class VirtualPetTest {
 	}
 	@Test
 	public void ShouldSubtractFromHunger() {
-		VirtualPet underTest = new VirtualPet("Steve",10,10,10);
+		VirtualPet underTest = new VirtualPet("Steve","Description",10,10,10);
 		underTest.feed();
 		int check = underTest.getHunger();
 		
@@ -61,7 +69,7 @@ public class VirtualPetTest {
 	}
 	@Test
 	public void ShouldSubtractFromThirst() {
-		VirtualPet underTest = new VirtualPet("Steve",10,10,10);
+		VirtualPet underTest = new VirtualPet("Steve","Description",10,10,10);
 		underTest.water();
 		int check = underTest.getThirst();
 		
@@ -69,7 +77,7 @@ public class VirtualPetTest {
 	}
 	@Test
 	public void ShouldSubtractFromBoredom() {
-		VirtualPet underTest = new VirtualPet("Steve",10,10,10);
+		VirtualPet underTest = new VirtualPet("Steve","Description",10,10,10);
 		underTest.play();
 		int check = underTest.getBoredom();
 		

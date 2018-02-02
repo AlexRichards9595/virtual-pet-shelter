@@ -18,6 +18,9 @@ public class VirtualPetShelter {
 	public VirtualPet getPet(String name) {
 		return pets.get(name);
 	}
+	public String getPetDescription(String name) {
+		return pets.get(name).getDescription();
+	}
 
 	public int getPetHunger(String name) {
 		return pets.get(name).getHunger();
@@ -28,5 +31,6 @@ public class VirtualPetShelter {
 	public int getPetBoredom(String name) {
 		return pets.get(name).getBoredom();
 	}
+	
 
 }

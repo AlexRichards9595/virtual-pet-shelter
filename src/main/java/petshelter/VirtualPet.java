@@ -6,12 +6,14 @@ public class VirtualPet {
 	private int hunger;
 	private int thirst;
 	private int boredom;
+	private String description;
 
-	public VirtualPet(String name, int hunger, int thirst, int boredom) {
+	public VirtualPet(String name, String description, int hunger, int thirst, int boredom) {
 		this.name = name; 
 		this.hunger = hunger;
 		this.thirst = thirst;
 		this.boredom = boredom;
+		this.description= description;
 	}
 
 	public String getName() {
@@ -28,6 +30,9 @@ public class VirtualPet {
 
 	public int getBoredom() {
 		return boredom;
+	}
+	public String getDescription() {
+		return description;
 	}
 
 	public void tick() {
@@ -51,8 +56,10 @@ public class VirtualPet {
 	
 	@Override
 	public String toString() {
-		return (name + hunger + thirst + boredom);
+		return (name + description +  hunger + thirst + boredom);
 	}
+
+	
 	
 
 }
