@@ -1,5 +1,6 @@
 package petshelter;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -31,6 +32,26 @@ public class VirtualPetShelter {
 	public int getPetBoredom(String name) {
 		return pets.get(name).getBoredom();
 	}
+
+	public void feedPet(String name) {
+		VirtualPet virtualPet = pets.get(name);
+		virtualPet.feed();
+	}
+
+	public Collection<VirtualPet> pets() {
+		return pets.values();
+	}
+
+	public void feedAllPets() {
+		for (VirtualPet virtualPet: pets()) {
+			feedPet(virtualPet.getName());
+		}
+	}
 	
 
+	
+	
+	
+	
+	
 }
