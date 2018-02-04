@@ -1,7 +1,7 @@
 package petshelter;
 
 public class VirtualPet {
-	
+
 	private String name;
 	private int hunger;
 	private int thirst;
@@ -9,17 +9,16 @@ public class VirtualPet {
 	private String description;
 
 	public VirtualPet(String name, String description) {
-		this(name,description,20,20,20);
+		this(name, description, 20, 20, 20);
 	}
-	
+
 	public VirtualPet(String name, String description, int hunger, int thirst, int boredom) {
-		this.name = name; 
+		this.name = name;
 		this.hunger = hunger;
 		this.thirst = thirst;
 		this.boredom = boredom;
-		this.description= description;
+		this.description = description;
 	}
-
 
 	public String getName() {
 		return name;
@@ -36,6 +35,7 @@ public class VirtualPet {
 	public int getBoredom() {
 		return boredom;
 	}
+
 	public String getDescription() {
 		return description;
 	}
@@ -44,7 +44,7 @@ public class VirtualPet {
 		hunger += 2;
 		thirst += 2;
 		boredom += 5;
-		
+
 	}
 
 	public void feed() {
@@ -58,13 +58,10 @@ public class VirtualPet {
 	public void play() {
 		boredom -= 10;
 	}
-	
+
 	@Override
 	public String toString() {
-		return (name + description +  hunger + thirst + boredom);
+		return (name + "\t\t|" + hunger + "\t|" + thirst + "\t|" + boredom);
 	}
-
-	
-	
 
 }
